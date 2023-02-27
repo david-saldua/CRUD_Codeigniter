@@ -1,11 +1,11 @@
 <div class="card card-outline card-primary rounded-0">
     <div class="card-header">
-        <h4 class="mb-o">List of Contact</h4>
+        <h4 class="mb-0">List of Contact</h4>
     </div>
     <div class="card-body">
         <div class="container-fluid">
             <table class="table table-stripped table-bordered">
-                <colgroup>
+                <colgroup> 
                     <col width="10%">
                     <col width="40%">
                     <col width="40%">
@@ -20,7 +20,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <? php if () ?>
+                    <?php if (count($list) > 0) ?>
+                    <? ?>
                 </tbody>
             </table>
         </div>
