@@ -20,8 +20,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (count($list) > 0) ?>
-                    <? ?>
+                    <?php if (count($list) > 0) : ?>
+                        <?php $i = 1; ?>
+                        <?php foreach ($list as $row): ?>
+                            <tr>
+                                <td class="p-1 align-middle text-center"><? $i++ ?></td>
+                                <td class="p-1 align-middle"><? $row->lastName. ", " .$row->firstName. (!empty($row->middleName:'')? " " .$row->middleName: '') ?></td>
+                                <td class="p1-align middle"><? $row->gender ?></td>
+                                <td class="p-1 align-middle text-center"></td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="<?= base_url('main/view_details/'.$row->id)?>" class="btn btn-default bg-gradient-light border text-dark rounded-0" title="View Contact"><i class="fa fa-eye"></i></a>
+                                        <a href="<?= base_url('main/edit/'.$row->id)?>" class="btn btn-primary rounded-0" title="Edit Contact"><i class="fa fa-edit"></i></a>
+                                        <a href="<?= base_url('main/delete/'.$row-id)?>" onclick="if(confirm('Are you sure to delete this contact details?') === false) event.preventDefault()" class="btn btn-danger rounded-0" title="Delete Contact"><i class="fa fa-trash"></i></a>
+                                    </div>
+                            </tr>
+                        <?php endforeach;?>
+                    <?php endif;?>
                 </tbody>
             </table>
         </div>
